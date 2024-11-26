@@ -24,11 +24,14 @@ function ComparisonTable({ data }: ComparisonTableProps) {
           <TableHead className="text-center *:mx-auto font-conthrax text-lg">
             <div className="flex-none flex justify-center gap-3">
               <img src="/logo.svg" className="max-h-9 w-auto" />
-              <img src="/letterwork.svg" className="max-h-12 w-auto hidden md:block" />
+              <img src="/letterwork.svg" className="max-h-12 w-auto hidden lg:block" />
             </div>
           </TableHead>
           <TableHead className="text-center *:mx-auto ">
-            <img src="/uniswap-logo.svg" className="max-h-10 w-auto" />
+            <div className="flex-none flex justify-center gap-1">
+              <img src="/uniswap-icon.png" className="max-h-9 w-auto" />
+              <img src="/uniswap-letterwork.png" className="max-h-9 w-auto hidden lg:block" />
+            </div>
           </TableHead>
         </TableRow>
       </TableHeader>
@@ -38,14 +41,14 @@ function ComparisonTable({ data }: ComparisonTableProps) {
             <TableCell className="text-sm md:text-base text-start c-font text-wrap">
               {i + 1}. {point.comparison}
             </TableCell>
-            <TableCell>
+            <TableCell className="px-4">
               {point.moonex ? (
                 <Check className="text-green-300 mx-auto" />
               ) : (
                 <X className="text-red-500 mx-auto" />
               )}
             </TableCell>
-            <TableCell>
+            <TableCell className="px-4">
               {point.uniswap ? (
                 <Check className="text-green-300 mx-auto" />
               ) : (
